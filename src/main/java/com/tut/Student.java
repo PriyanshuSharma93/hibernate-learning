@@ -5,21 +5,18 @@ import javax.persistence.Id;
 
 @Entity
 public class Student {
-	
+
 	@Id
 	private int id;
-	
 	private String name;
-	
 	private String city;
-	
 	public Student(int id, String name, String city) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.city = city;
 	}
-	
+
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -52,8 +49,7 @@ public class Student {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return  this.id+" : " +this.name+" : "+this.city;
+		return this.id + " : " + this.name + " : " + this.city;
 	}
-	
 
 }
