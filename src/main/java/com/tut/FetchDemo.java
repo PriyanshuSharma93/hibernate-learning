@@ -11,10 +11,10 @@ public class FetchDemo {
         SessionFactory factory = cfg.buildSessionFactory();
         Session session=factory.openSession();
 //       get-student:102
-        Student student = session.load(Student.class,102);
-        System.out.println(student);
+        Student student = (Student)session.load(Student.class,102);
+        System.out.println(student.getName());
         
-        Address ad=session.get(Address.class,1);
+        Address ad=(Address)session.get(Address.class,1);
         System.out.println(ad.getStreet()+" : " +ad.getCity());
         
         factory.close();
