@@ -4,6 +4,7 @@ package com.map;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class Question {
 	
 	private String question;
 	
-	@OneToMany(mappedBy = "question", cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "question",fetch = FetchType.EAGER)
 	private List<Answer> answers = new ArrayList<>();
 	
 	public int getQuestionId() {

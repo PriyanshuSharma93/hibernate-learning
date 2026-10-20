@@ -51,12 +51,14 @@ public class MapDemo {
         
         
         Question q=(Question)s.get(Question.class,1213);
-        
+        System.out.println(q.getQuestionId());
         System.out.println(q.getQuestion());
+        //lazy
+        System.out.println(q.getAnswers().size());
         
-        for(Answer a:q.getAnswers()) {
-        	   System.out.println(a.getAnswer());
-        }
+//        for(Answer a:q.getAnswers()) {
+//        	   System.out.println(a.getAnswer());
+//        }
 
         tx.commit();
         
